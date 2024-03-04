@@ -9,29 +9,29 @@ import java.util.Random;
  * @version 1.0.0
  * @date 5/27/21 11:02
  */
+//Version 1.0 WORDGUESS GAME / PRACTICE
+// REMEMBER TO REWRITE GAME CODES
 
 
-
-//Version 1.0 WORDGUESS , PRACTICE
 public class Wordguess {
         private String words[] = {"honda", "toyota", "nissan", "lexus"};
         private char[] secretWord;
         private char[] guesses;
-        private int maxGuesses = 10;
+        private int maxGuesses;
         private int numGuesses;
         Scanner scanner;
 
         public Wordguess() {
-                this.maxGuesses = 10;
+                this.maxGuesses = 6;
                 this.scanner = new Scanner(System.in);
         }
 
         public void runGame() {
-                System.out.println("Let's Play Wordguess V1.0");
+                System.out.println("LET'S PLAY WORDGUESS V1.0");
                 do {
                         initializeGameState();
                         playRound();
-                        System.out.println("Game Over!!!");
+                        System.out.println("GAME OVER!!!");
                 } while (askToPlayAgain());
         }
 
@@ -95,7 +95,7 @@ public class Wordguess {
         private void playerWon() {
                 System.out.println("**** ****");
                 printArray(secretWord);
-                System.out.println("Congratulations, You Won!!!");
+                System.out.println("CONGRATS, YOU WON!!!");
         }
 
         private void playerLost() {
@@ -118,7 +118,7 @@ public class Wordguess {
 
         public static void main(String[] args) {
                 Wordguess game = new Wordguess();
-                game.runGame();
+                game.runGame(); 
         }
 }
 
