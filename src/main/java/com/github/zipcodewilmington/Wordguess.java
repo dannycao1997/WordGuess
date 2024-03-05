@@ -13,13 +13,14 @@ import java.util.Random;
 
 
 public class Wordguess {
-        private final String[] words = {"honda", "dodge", "tesla", "lexus"};
-        private char[] secretWord;
-        private char[] guesses;
-        private int maxGuesses = 5;
-        private int guessesLeft;
-        private boolean playAgain;
-        
+        public static void main(String[] args) {
+                String[] words = {"tesla", "honda", "dodge", "lexus"};
+                Random random = new Random();
+                String secretWord = words[random.nextInt(words.length)];
+                char[] guessedWord = new char[secretWord.length()];
+                int triesLeft = 5;
+        }
+
 
 
 
